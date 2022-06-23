@@ -11,22 +11,53 @@ function createNewSquare(){
 // Creo la variabile di collegamento al bottone nell'html
 let buttonStart = document.getElementById('button-start');
 
+// Variabile per recuperare il value del select della difficoltà nell'html
+const difficult = document.getElementById('framework')
+        buttonStart.onclick = (event) => {
+            event.preventDefault();
+            console.log(difficult.value);
+        };
+
 buttonStart.addEventListener('click', function(){
     // Svuotamento della griglia
     document.getElementById('grid-container').innerHTML = '';
 
     // Ciclo per l'inserimento dei quadrati nella griglia con relativo numero crescente
-    for (let i = 1; i <= 100; i++) {
-        const newSquare = createNewSquare();
-        newSquare.innerHTML = i;
-        // aggiunta classi al nuovo quadrato ad ogni click
-        newSquare.addEventListener('click', function(){
-            newSquare.classList.toggle('active');
-        })
+    if(difficult.value == 0){
+        for (let i = 1; i <= 100; i++) {
+            const newSquare = createNewSquare();
+            newSquare.innerHTML = i;
+            // aggiunta classi al nuovo quadrato ad ogni click
+            newSquare.addEventListener('click', function(){
+                newSquare.classList.toggle('active');
+            })
 
-        gridContainer.append(newSquare);    
+            gridContainer.append(newSquare);    
+        }
+    } else if (difficult.value == 1){
+        for (let i = 1; i <= 81; i++) {
+            const newSquare = createNewSquare();
+            newSquare.innerHTML = i;
+            // aggiunta classi al nuovo quadrato ad ogni click
+            newSquare.addEventListener('click', function(){
+                newSquare.classList.toggle('active');
+            })
+
+            gridContainer.append(newSquare); 
+        }
+    } else if (difficult.value == 2){
+        for (let i = 1; i <= 49; i++) {
+            const newSquare = createNewSquare();
+            newSquare.innerHTML = i;
+            // aggiunta classi al nuovo quadrato ad ogni click
+            newSquare.addEventListener('click', function(){
+                newSquare.classList.toggle('active');
+            })
+
+            gridContainer.append(newSquare); 
+        }            
     }
-})
+});
 
 
 

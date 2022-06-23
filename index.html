@@ -18,8 +18,17 @@
                     <span class="fs-1 fw-bold align-middle">CAMPO MINATO</span>
                 </div>
                 <div class="col-auto">
-                    <span class="mx-2">Clicca il bottone per cominciare a giocare <i class="bi bi-arrow-right align-middle"></i></span>
-                    <button id="button-start" type="button" class="btn btn-primary">Inizia</button>
+                    <span class="mx-2">
+                        <form>
+                            <label for="framework">Seleziona una difficoltà:</label>
+                                <select id="framework" class="mx-2 align-middle">
+                                    <option value="0">Facile</option>
+                                    <option value="1">Normale</option>
+                                    <option value="2">Difficile</option>
+                                </select>
+                                <span><button id="button-start" type="button" class="btn btn-primary">Inizia</button></span>
+                        </form>
+                    </span>
                 </div>
             </div>
         </div>
