@@ -34,8 +34,9 @@ buttonStart.addEventListener('click', function(){
             gridContainer.append(newSquare);    
         }
     } else if (difficult.value == 1){
-        for (let i = 1; i <= 80; i++) {
+        for (let i = 1; i <= 81; i++) {
             const newSquare = createNewSquare();
+            newSquare.classList.add('medium');
             newSquare.innerHTML = i;
             // aggiunta classi al nuovo quadrato ad ogni click
             newSquare.addEventListener('click', function(){
@@ -45,8 +46,9 @@ buttonStart.addEventListener('click', function(){
             gridContainer.append(newSquare); 
         }
     } else if (difficult.value == 2){
-        for (let i = 1; i <= 50; i++) {
+        for (let i = 1; i <= 49; i++) {
             const newSquare = createNewSquare();
+            newSquare.classList.add('hard');
             newSquare.innerHTML = i;
             // aggiunta classi al nuovo quadrato ad ogni click
             newSquare.addEventListener('click', function(){

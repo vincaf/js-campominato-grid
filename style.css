@@ -25,8 +25,8 @@ main{
 
 div#grid-container{
     margin: 0 auto;
-    width: 700px;
-    height: 700px;
+    width: 550px;
+    height: 550px;
 }
 
 div.square{
@@ -43,6 +43,16 @@ div.square{
     font-weight: bold;
 }
 
+.medium{
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+
+.hard{
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+}
+
 /**** Tolto il bordo a grid-container per far vedere meglio cambiando la difficolta */
 /**** da rivalutare */
 
@@ -54,4 +64,14 @@ div.square{
 div.square.active{
     background-color: #7fffd4;
     color: #011627;
+}
+
+div.square.medium{
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+
+div.square.hard{
+    width: calc(100% / 7);
+    height: calc(100% / 7);
 }
