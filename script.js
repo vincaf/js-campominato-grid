@@ -12,6 +12,9 @@ function createNewSquare(){
 let buttonStart = document.getElementById('button-start');
 
 buttonStart.addEventListener('click', function(){
+    // Svuotamento della griglia
+    document.getElementById('grid-container').innerHTML = '';
+
     // Ciclo per l'inserimento dei quadrati nella griglia con relativo numero crescente
     for (let i = 1; i <= 100; i++) {
         const newSquare = createNewSquare();
