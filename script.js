@@ -8,3 +8,10 @@ function createNewSquare(){
     return currentSquare;
 }
 
+// Ciclo per l'inserimento dei quadrati nella griglia con relativo numero crescente
+for (let i = 1; i <= 100; i++) {
+    const newSquare = createNewSquare();
+    newSquare.innerHTML = i;
+    gridContainer.append(newSquare);    
+}
+
