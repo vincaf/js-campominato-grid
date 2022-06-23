@@ -19,6 +19,11 @@ buttonStart.addEventListener('click', function(){
     for (let i = 1; i <= 100; i++) {
         const newSquare = createNewSquare();
         newSquare.innerHTML = i;
+        // aggiunta classi al nuovo quadrato ad ogni click
+        newSquare.addEventListener('click', function(){
+            newSquare.classList.toggle('active');
+        })
+
         gridContainer.append(newSquare);    
     }
 })
