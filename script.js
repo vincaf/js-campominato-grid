@@ -13,11 +13,10 @@ let buttonStart = document.getElementById('button-start');
 
 // Variabile per recuperare il value del select della difficoltà nell'html
 const difficult = document.getElementById('framework')
-        buttonStart.onclick = (event) => {
-            console.log(difficult.value);
-        };
 
+// Evento al momento del click sul bottone "inizia"
 buttonStart.addEventListener('click', function(){
+    
     // Svuotamento della griglia
     document.getElementById('grid-container').innerHTML = '';
 

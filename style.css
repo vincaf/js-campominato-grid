@@ -53,10 +53,7 @@ div.square{
     height: calc(100% / 7);
 }
 
-/**** Tolto il bordo a grid-container per far vedere meglio cambiando la difficolta */
-/**** da rivalutare */
-
-/* div#grid-container, */
+div#grid-container,
 div.square{
     border: 4px white solid;
 }
